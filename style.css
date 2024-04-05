@@ -1,0 +1,11 @@
+.board {
+    border: 5px solid black;
+    width: 600px;
+}
+.grid-row {
+    display: flex;
+}
+
+.grid-box {
+    border: 1px solid black;
+}
