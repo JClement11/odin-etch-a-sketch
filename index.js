@@ -13,9 +13,16 @@ function createGrid(numberOfGrids) {
             gridBox.classList.add("grid-box");
             gridBox.style.height = `${heightAndWidth}px`;
             gridBox.style.width = `${heightAndWidth}px`;
+            changeGridColor(gridBox);
             gridRow.appendChild(gridBox);
         }
-    }
+    }   
+}
+
+function changeGridColor(box) {
+    box.addEventListener("mouseover", () => {
+        box.classList.add("hover");
+    });
 }
 
 createGrid(boardDimensions);
