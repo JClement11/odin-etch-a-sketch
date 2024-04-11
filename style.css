@@ -1,6 +1,16 @@
+.title {
+    text-align: center;
+}
+
+.reset {
+    display: block;
+    margin: auto;
+}
+
 .board {
     border: 5px solid black;
     width: 750px;
+    margin: 25px auto;
 }
 
 .grid-row {
