@@ -25,4 +25,18 @@ function changeGridColor(box) {
     });
 }
 
+function resetBoard() {
+    boardDimensions = prompt("What size grid do you want? (1-100)");
+    if (boardDimensions >= 1 && boardDimensions <= 100) {
+        board.textContent = "";
+        createGrid(boardDimensions);
+    }
+    else {
+        alert("Please enter a number between 1-100");
+    }
+}
+
+let resetButton = document.querySelector(".reset");
+resetButton.addEventListener("click", resetBoard);
+
 createGrid(boardDimensions);
