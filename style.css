@@ -1,7 +1,8 @@
 .board {
     border: 5px solid black;
-    width: 600px;
+    width: 750px;
 }
+
 .grid-row {
     display: flex;
 }
