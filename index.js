@@ -33,7 +33,7 @@ function resetBoard() {
     }
 }
 
-let resetButton = document.querySelector(".reset");
+let resetButton = document.querySelector(".reset-btn");
 resetButton.addEventListener("click", resetBoard);
 
 createGrid(boardDimensions);
