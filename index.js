@@ -16,6 +16,12 @@ function createGrid(numberOfGrids) {
     }   
 }
 
+function changeGridColorBlack(box) {
+    box.addEventListener("mouseover", () => {
+        box.classList.add("hover-black");
+    });
+}
+
 function createRandomRGB() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
