@@ -16,9 +16,18 @@ function createGrid(numberOfGrids) {
     }   
 }
 
-function changeGridColor(box) {
+function createRandomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return {r, g, b};
+}
+
+function changeGridColorRandom(box) {
+    const {r, g, b} = createRandomRGB();
     box.addEventListener("mouseover", () => {
-        box.classList.add("hover");
+    const bgColor = "rgb(" + r + "," + g + "," + b + ")";
+    box.style.background = bgColor;
     });
 }
 
