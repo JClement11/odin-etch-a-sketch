@@ -51,4 +51,14 @@ function resetBoard() {
 let resetButton = document.querySelector(".reset-btn");
 resetButton.addEventListener("click", resetBoard);
 
+let blackButton = document.querySelector(".black-btn");
+let rgbButton = document.querySelector(".rgb-btn");
+
+blackButton.addEventListener("click", () => {
+    color = "black";
+});
+rgbButton.addEventListener("click", () => {
+    color = "random";
+});
+
 createGrid(boardDimensions);
