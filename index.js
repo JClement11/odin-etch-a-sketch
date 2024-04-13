@@ -11,18 +11,12 @@ function createGrid(numberOfGrids) {
         for (let j = 0; j < numberOfGrids; j++) {
             const gridBox = document.createElement("div");
             gridBox.classList.add("grid-box");
-            changeGridColor(gridBox);
             gridRow.appendChild(gridBox);
+            gridBox.addEventListener("mouseover", changeColor);
         }
-    }   
+    }  
 }
-
-function changeGridColorBlack(box) {
-    box.addEventListener("mouseover", () => {
-        box.classList.add("hover-black");
-    });
-}
-
+    
 function createRandomRGB() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -30,14 +24,17 @@ function createRandomRGB() {
     return {r, g, b};
 }
 
-function changeGridColorRandom(box) {
-    const {r, g, b} = createRandomRGB();
-    box.addEventListener("mouseover", () => {
-    const bgColor = "rgb(" + r + "," + g + "," + b + ")";
-    box.style.background = bgColor;
-    });
+function changeColor() {
+    if (color === "random") {
+        const {r, g, b} = createRandomRGB();
+        const bgColor = "rgb(" + r + "," + g + "," + b + ")";
+        this.style.backgroundColor = bgColor;
+    }
+    else {
+        this.style.backgroundColor = color;
+    }
 }
-
+    
 function resetBoard() {
     boardDimensions = prompt("What size grid do you want? (1-100)");
     if (boardDimensions >= 1 && boardDimensions <= 100) {
