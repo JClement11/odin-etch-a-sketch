@@ -1,5 +1,6 @@
 let board = document.querySelector(".board");
 let boardDimensions = 16;
+let color = "black";
 
 function createGrid(numberOfGrids) {
     for (let i = 0; i < numberOfGrids; i++) {
